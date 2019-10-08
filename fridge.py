@@ -88,8 +88,8 @@ while True:
     try:
         if sensor_value > bound[0] :
             if temp > conf.threshold :
-                print ("Alert! The temperature level increased suddenly. Sending an Telegram alert.")
-                message = "Alert! temperature has exceeded " + str(conf.threshold) + ". The current temperature is " + str(temp) + "°C."
+                print ("Alert! Someone has opened the fridge.")
+                message = "Someone has opened the Fridge."
                 telegram_status = send_telegram_message(message)
                 if telegram_status == true :
                     print("Telegram alert sent.")
